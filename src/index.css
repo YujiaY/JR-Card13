@@ -61,7 +61,7 @@ div {
     position: relative;
     display: -webkit-box;
     display: -moz-box;
-    display: box;
+    /*display: box;*/
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -75,7 +75,7 @@ div {
     border-radius: 12px;
 }
 
-.jr-service-card {
+.travel-hotel-card {
     width: 17.5rem;
     text-align: center;
     position: relative;
@@ -93,16 +93,16 @@ img {
     border-radius: 15px;
 }
 
-.card img {
+.card>img {
     max-width: 100%;
     height: auto;
 }
 
-.jr-service-card__header img {
+.travel-hotel-card--header>img {
     width: 100%;
 }
 
-#jr-service-card--fav {
+.travel-hotel-card--fav {
     width: 35px;
     position: absolute;
     top: 8px;
@@ -116,9 +116,9 @@ img {
     margin-left: -15px;
 }
 
-.jr-service-card__body {
+.travel-hotel-card--body {
     background: aqua;
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
     position: absolute;
     bottom: -50px;
@@ -130,30 +130,30 @@ img {
     box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
 }
 
-.jr-service-card__body .info-box {
+.travel-hotel-card--body.info-box {
     text-align: left;
 }
 
-.jr-stars {
+.hotel-stars {
     width: 7.5rem;
     height: 1.5rem;
     overflow: hidden;
     display: inline-block;
     margin: 0.25rem 0 -0.125rem;
 }
-.jr-stars__sm {
+.hotel-stars--sm {
     width: 4.7rem;
     height: 0.9rem;
 }
 
-.jr-stars>div {
+.hotel-stars>div {
     float: left;
     height: 1.5rem;
     background: url(./img/icons/icon-star-large-yellow-sm.svg) repeat-x;
 }
 
 
-.jr-stars__sm {
+.hotel-stars--sm {
     width: 4.7rem;
     height: 0.9rem;
     background: url(./img/icons/icon-star-large-gray-sm.svg) repeat-x;
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-right: 15px;
 }
 
-.jr-btn-circle-arrow-right {
+.travel-btn-circle-arrow-right {
     padding: 0;
     border-radius: 20px;
     width: 40px;
