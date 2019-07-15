@@ -1,0 +1,37 @@
+@mixin box-shadow(){
+  box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+}
+
+//
+//@mixin MQ($canvas) {
+//  @if $canvas==XS {
+//    @media only screen and (max-width: $XS) {
+//      @content;
+//    }
+//  }
+//  @if $canvas==S {
+//    @media only screen and (max-width: $S) {
+//      @content;
+//    }
+//  }
+//  @else if $canvas==M {
+//    @media only screen and (max-width: $M) {
+//      @content;
+//    }
+//  }
+//  @else if $canvas==ML {
+//    @media only screen and (max-width: $ML) {
+//      @content;
+//    }
+//  }
+//  @else if $canvas==L {
+//    @media only screen and (max-width: $L) {
+//      @content;
+//    }
+//  }
+//  @else if $canvas==maxL {
+//    @media only screen and (min-width: $maxL) {
+//      @content;
+//    }
+//  }
+//}

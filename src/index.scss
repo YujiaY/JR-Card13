@@ -1,257 +1,167 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-body {
-    margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-}
-
-div {
-    display: block;
-}
-
 .card {
+    @include box-shadow;
+    width:300px;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
+    //flex-direction: column;
+    min-width: 200px;
     word-wrap: break-word;
-    background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,0.125);
-    border-radius: .25rem;
-}
-
-.card {
-    border-radius: 12px;
-    box-shadow: 0 6px 10px -4px rgba(0,0,0,0.15);
-    background-color: #FFFFFF;
     color: #333333;
-    margin-bottom: 20px;
-    position: relative;
+    margin: 10px 10px 60px ;
     z-index: 1;
     border: 0 none;
-    -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),box-shadow 200ms ease;
-    -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),box-shadow 200ms ease;
-    -o-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),box-shadow 200ms ease;
-    -ms-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),box-shadow 200ms ease;
-    transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),box-shadow 200ms ease;
-}
-
-.card {
-    position: relative;
-    display: -webkit-box;
-    display: -moz-box;
-    /*display: box;*/
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: $border-radius;
+    >img {
+      max-width: 20%;
+      height: auto;
+    }
+    .travel-hotel-card {
+      width: 20%;
+      text-align: center;
+      position: relative;
+      border-radius: $border-radius;
+      padding: 0;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 100px;
+    }
+    img {
+        vertical-align: middle;
+        border-style: none;
+        border-radius: $border-radius;
+    }
+    .travel-hotel-card__header{
+        &>img {
+        width: 100%;
+        }
+        &--fav {
+            width: 35px;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 2;
+        }
+    }
+    .travel-hotel-card__body {
+        background: aqua;
+        width: 95%;
+        margin: 0 auto;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        opacity:0.9;
+        transform: translateX(-50%);
+        padding: 15px 0;
+        border-radius: $border-radius;
+      .info-box {
+        text-align: left;
+      }
+    }
+    .hotel-stars {
+        width: 7.5rem;
+        height: 1.5rem;
+        overflow: hidden;
+        display: inline-block;
+        margin: 0.25rem 0 -0.125rem;
+        & > div {
+            float: left;
+            height: 1.5rem;
+            background: url(./img/icons/icon-star-large-yellow-sm.svg) repeat-x;
+        }
+    }
+    .hotel-stars--sm {
+        width: 4.7rem;
+        height: 0.9rem;
+        background: url(./img/icons/icon-star-large-gray-sm.svg) repeat-x;
+    }
+    .grey {
+        color: gray !important;
+    }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .col-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        margin-bottom: .5rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: inherit;
+    }
+
+    .col-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+    }
+    .position-relative {
+        position: relative;
+    }
+    .no-padding {
+        padding: 0px !important;
+    }
+    .btn {
+        color: gold;
+        height: 40px;
+        padding: 6px 2.5rem;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 20px;
+        border: none;
+        line-height: 1.5rem;
+        transition: all 0.3s ease;
+        background: transparent;
+        position: relative;
+        margin-right: 15px;
+    }
+    .travel-btn-circle-arrow-right {
+        padding: 0;
+        border-radius: 20px;
+        width: 40px;
+        position: relative;
+        height: 40px;
+        background: linear-gradient(to top right, #ffb369 0%, rgba(27, 148, 226, 1), #F4A772);
+        @include box-shadow;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .position-absolute {
+        position: absolute;
+    }
+
+    .bottom-0 {
+        bottom: 3px;
+        right: 8px;
+    }
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.red-box {
+  background: red;
 }
 
-.travel-hotel-card {
-    width: 17.5rem;
-    text-align: center;
-    position: relative;
-    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
-    border-radius: 15px;
-    padding: 0;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 100px;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-    border-radius: 15px;
-}
-
-.card>img {
-    max-width: 100%;
-    height: auto;
-}
-
-.travel-hotel-card--header>img {
-    width: 100%;
-}
-
-.travel-hotel-card--fav {
-    width: 35px;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    z-index: 2;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.travel-hotel-card--body {
-    background: aqua;
-    width: 95%;
-    margin: 0 auto;
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    opacity:0.9;
-    transform: translateX(-50%);
-    padding: 15px 0;
-    border-radius: 15px;
-    box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
-}
-
-.travel-hotel-card--body.info-box {
-    text-align: left;
-}
-
-.hotel-stars {
-    width: 7.5rem;
-    height: 1.5rem;
-    overflow: hidden;
-    display: inline-block;
-    margin: 0.25rem 0 -0.125rem;
-}
-.hotel-stars--sm {
-    width: 4.7rem;
-    height: 0.9rem;
-}
-
-.hotel-stars>div {
-    float: left;
-    height: 1.5rem;
-    background: url(./img/icons/icon-star-large-yellow-sm.svg) repeat-x;
-}
-
-
-.hotel-stars--sm {
-    width: 4.7rem;
-    height: 0.9rem;
-    background: url(./img/icons/icon-star-large-gray-sm.svg) repeat-x;
-}
-.grey {
-    color: #8591B0 !important;
-}
-
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-bottom: .5rem;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
-}
-
-.col-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%;
-}
-.position-relative {
-    position: relative;
-}
-
-.position-relative {
-    position: relative !important;
-}
-.no-padding {
-    padding: 0px !important;
-}
-
-
-.btn, .navbar .btn {
-    color: white;
-    height: 2.3rem;
-    padding: 6px 2.5rem;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 1.5em;
-    border: none;
-    line-height: 1.5rem;
-    transition: all 0.3s ease;
-    background: linear-gradient(to right, #ffb369 0%, #ff4272 100%);
-    position: relative;
-    margin-right: 15px;
-}
-
-.travel-btn-circle-arrow-right {
-    padding: 0;
-    border-radius: 20px;
-    width: 40px;
-    position: relative;
-    height: 40px;
-    background: linear-gradient(to top right, #FA709A, rgba(27, 148, 226, 1), #F4A772);
-    box-shadow: 0px 2px 4px 0px rgba(250,112,154,0.5), 0 8px 11px rgba(244,167,114,0.5);
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-/*.btn:last-child, .btn:last-child {*/
-/*    margin-right: 0;*/
-/*}*/
-
-.btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.position-absolute {
-    position: absolute;
-}
-
-.bottom-0 {
-    bottom: 3px;
-    right: 8px;
+.grey-box {
+  background: green;
 }
